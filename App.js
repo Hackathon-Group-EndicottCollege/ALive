@@ -6,16 +6,26 @@ import CreateAccount from "./CreateAccount"
 
 export default function App() {
   const [isLoggedIn, setLogin] = useState(false);
+  const [signup, setSignup] = useState(false);
   if (isLoggedIn) {
     return (
       <View style={styles.container}>
         <Navigation />
       </View>
     );
-  } else {
+  } 
+  else if(signup){
+    return(
+      <View>
+        <CreateAccount />
+      </View>
+    )
+  }
+  
+  else {
     return (
       <View>
-        <Login setLogin={setLogin} />
+        <Login setLogin={setLogin} setSignup = {setSignup}/>
       </View>
     );
   }
