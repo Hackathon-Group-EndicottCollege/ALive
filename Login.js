@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   title:{
     fontSize: 20,
     fontWeight: "bold",
-    fontFamily: "Roboto",
+    // fontFamily: "Roboto",
     color: "Black",
     marginBottom: 15
   },
