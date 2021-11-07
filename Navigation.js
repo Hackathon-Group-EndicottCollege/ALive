@@ -5,12 +5,15 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { NavigationContainer } from "@react-navigation/native";
 import { Dimensions } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import CameraScreen from "./Camera";
+
 const fakeScene1 = () => {
   return (
     <SafeAreaView
       style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
     >
       <Text>I hate myself</Text>
+      {/* <CameraScreen> </CameraScreen> */}
     </SafeAreaView>
   );
 };
