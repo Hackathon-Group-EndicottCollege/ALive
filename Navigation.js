@@ -5,9 +5,9 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { NavigationContainer } from "@react-navigation/native";
 import { Dimensions } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import CameraScreen from "./Camera";
+import Gallery from './Gallery';
 
-const fakeScene1 = () => {
+const cameraPlaceHolder = () => {
   return (
     <SafeAreaView
       style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
@@ -18,19 +18,11 @@ const fakeScene1 = () => {
   );
 };
 
-const fakeScene2 = () => {
-  return (
-    <SafeAreaView
-      style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
-    >
-      <Text>Pain</Text>
-    </SafeAreaView>
-  );
-};
+
 
 const Tab = createMaterialBottomTabNavigator();
 
-function Navigation() {
+const Navigation = () => {
   return (
     <View style={{ flex: 1 }}>
       <NavigationContainer>
@@ -43,7 +35,7 @@ function Navigation() {
         >
           <Tab.Screen
             name="Camera"
-            component={fakeScene1}
+            component={cameraPlaceHolder}
             options={{
               tabBarLabel: "Live Now",
               tabBarIcon: ({ color }) => (
@@ -53,7 +45,7 @@ function Navigation() {
           />
           <Tab.Screen
             name="Gallery"
-            component={fakeScene2}
+            component={Gallery}
             options={{
               tabBarLabel: "Gallery",
               tabBarIcon: ({ color }) => (
