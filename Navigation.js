@@ -6,21 +6,11 @@ import { NavigationContainer } from "@react-navigation/native";
 import { Dimensions } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Gallery from './Gallery';
-
-const cameraPlaceHolder = () => {
-  return (
-    <SafeAreaView
-      style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
-    >
-      <Text>Live Camera</Text>
-    </SafeAreaView>
-  );
-};
-
+import CameraScreen from './Camera'
 
 const Tab = createMaterialBottomTabNavigator();
 
-function Navigation() {
+const Navigation = () => {
   return (
     <View style={{ flex: 1 }}>
       <NavigationContainer>
@@ -33,7 +23,7 @@ function Navigation() {
         >
           <Tab.Screen
             name="Camera"
-            component={cameraPlaceHolder}
+            component={CameraScreen}
             options={{
               tabBarLabel: "Live Now",
               tabBarIcon: ({ color }) => (
