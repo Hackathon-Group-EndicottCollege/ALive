@@ -29,6 +29,7 @@ const Login = (props) => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>ALIVE!</Text>
       <TextInput
         style={styles.input}
         onChangeText={setEmail}
@@ -70,6 +71,13 @@ const styles = StyleSheet.create({
   container: {
     width: Dimensions.get("window").width,
     height: Dimensions.get("window").height,
+  },
+  title:{
+    fontSize: 20,
+    fontWeight: "bold",
+    fontFamily: "Roboto",
+    color: "Black",
+    marginBottom: 15
   },
   input: {
     height: 40,

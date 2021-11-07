@@ -17,7 +17,7 @@ const validate = (email) => {
     }
 }
 
-const CreateAccount = () => {
+const CreateAccount = (props) => {
     const [name , onChangeName] = React.useState();
     const [email, onChangeEmail] = React.useState();
     const [pword, onChangePword] = React.useState();
@@ -67,8 +67,19 @@ const CreateAccount = () => {
             }
             if(confirmpword != pword){
                 alert('Passwords dont match');
-            }}}
-      />
+            }
+            if(confirmpword == pword && validate(email)){
+                props.setSignup(false);
+            }
+        }}/>
+        <Button
+        title="Back"
+        color="#000000"
+        style= {styles.backButton}
+        onPress={()=>{
+            props.setSignup(false);
+        }}
+        />
     </SafeAreaView>
     );
     }
@@ -77,6 +88,10 @@ const styles = StyleSheet.create({
     container: {
         width: Dimensions.get("window").width,
         height:Dimensions.get("window").height,
+    },
+    backButton:{
+        marginTop:5,
+        paddingTop:5,
     },
     input: {
       height: 40,

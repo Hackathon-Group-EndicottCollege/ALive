@@ -17,7 +17,7 @@ export default function App() {
   else if(signup){
     return(
       <View>
-        <CreateAccount />
+        <CreateAccount setLogin={setLogin} setSignup={setSignup} />
       </View>
     )
   }
