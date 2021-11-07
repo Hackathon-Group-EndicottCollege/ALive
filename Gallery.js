@@ -1,67 +1,22 @@
 import moment from "moment";
 import React from "react";
-import { SafeAreaView,Text,StyleSheet, FlatList, View, } from "react-native";
+import { SafeAreaView,Text,StyleSheet, FlatList, View,Button } from "react-native";
 import { Dimensions } from "react-native";
 const DATA = [
     {
       id: moment().format(),
       title: moment().format('LLLL')+" - "+moment().format('LT'),
+       img: "icon.png",
     },
     {
         id: moment().format(),
         title: moment().format('LLLL')+" - "+moment().format('LT'),
+         img: "icon.png",
       },
       {
         id: moment().format(),
         title: moment().format('LLLL')+" - "+moment().format('LT'),
-      },
-      {
-        id: moment().format(),
-        title: moment().format('LLLL')+" - "+moment().format('LT'),
-      },
-      {
-        id: moment().format(),
-        title: moment().format('LLLL')+" - "+moment().format('LT'),
-      },
-      {
-        id: moment().format(),
-        title: moment().format('LLLL')+" - "+moment().format('LT'),
-      },
-      {
-        id: moment().format(),
-        title: moment().format('LLLL')+" - "+moment().format('LT'),
-      },
-      {
-        id: moment().format(),
-        title: moment().format('LLLL')+" - "+moment().format('LT'),
-      },
-      {
-        id: moment().format(),
-        title: moment().format('LLLL')+" - "+moment().format('LT'),
-      },
-      {
-        id: moment().format(),
-        title: moment().format('LLLL')+" - "+moment().format('LT'),
-      },
-      {
-        id: moment().format(),
-        title: moment().format('LLLL')+" - "+moment().format('LT'),
-      },
-      {
-        id: moment().format(),
-        title: moment().format('LLLL')+" - "+moment().format('LT'),
-      },
-      {
-        id: moment().format(),
-        title: moment().format('LLLL')+" - "+moment().format('LT'),
-      },
-      {
-        id: moment().format(),
-        title: moment().format('LLLL')+" - "+moment().format('LT'),
-      },
-      {
-        id: moment().format(),
-        title: moment().format('LLLL')+" - "+moment().format('LT'),
+         img: "icon.png",
       },
   ];
 
@@ -82,6 +37,7 @@ const Gallery = () => {
       );
     
       return (
+        <View>
         <SafeAreaView style={styles.container}>
           <FlatList
             data={DATA}
@@ -89,12 +45,14 @@ const Gallery = () => {
             keyExtractor={item => item.id}
           />
         </SafeAreaView>
+        </View>
       );
 }
 const styles = StyleSheet.create({
     container: {
       backgroundColor: '#111111',
-      flex: 1,
+      flex: 2,
+      height: 200,
     },
     item: {
       backgroundColor: '#808080',
