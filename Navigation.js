@@ -7,7 +7,7 @@ import { Dimensions } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Gallery from './Gallery';
 
-const fakeScene1 = () => {
+const cameraPlaceHolder = () => {
   return (
     <SafeAreaView
       style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
@@ -33,7 +33,7 @@ function Navigation() {
         >
           <Tab.Screen
             name="Camera"
-            component={fakeScene1}
+            component={cameraPlaceHolder}
             options={{
               tabBarLabel: "Live Now",
               tabBarIcon: ({ color }) => (
