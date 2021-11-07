@@ -53,10 +53,12 @@ const styles = StyleSheet.create({
         margin: 20,
     },
     button: {
-        flex: 1,
-        alignSelf: 'flex-end',
-        alignItems: 'center',
-        height: Dimensions.get("window").height - 100,
+        width: (Dimensions.get("window").width)*.3,
+        borderRadius: 25,
+        height: 50,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "green",
     },
     text: {
         fontSize: 18,
