@@ -10,7 +10,7 @@ const CameraScreen = (props) => {
     const [type, setType] = useState(Camera.Constants.Type.back);
     const [hasPermission, setHasPermission] = useState(null);
     const [isRecording, setRecording] = useState(false)
-
+    const [recordText, changeText] = useState("Record")
     useEffect(() => {
         (async () => {
         const { status } = await Camera.requestCameraPermissionsAsync();
@@ -33,7 +33,7 @@ const CameraScreen = (props) => {
             <Camera style={styles.camera} type={type}>
                 <View style={styles.buttonContainer}>
                 <TouchableOpacity
-                    style={styles.button}
+                    style={styles.buttonFlip}
                     onPress={() => {
                     setType(
                         type === Camera.Constants.Type.back
@@ -42,6 +42,20 @@ const CameraScreen = (props) => {
                     );
                     }}>
                     <Text style={styles.text}> Flip </Text>
+                </TouchableOpacity>
+                </View>
+                <View style={styles.recordContainer}>
+                <TouchableOpacity
+                    style={styles.buttonRecord}
+                    onPress={() => {
+                        if(recordText==='Record'){
+                            changeText("Live Now")
+                        }
+                        else{
+                            changeText("Record")
+                        }
+                    }}>
+                    <Text style={styles.text}> {recordText} </Text>
                 </TouchableOpacity>
                 </View>
             </Camera>
@@ -55,18 +69,34 @@ const styles = StyleSheet.create({
         height: Dimensions.get("window").height,
     },    
     buttonContainer: {
-        flex: 1,
+        flex: 2,
         backgroundColor: 'transparent',
         flexDirection: 'row',
         margin: 20,
     },
-    button: {
+    recordContainer: {
+        flex: 2,
+        backgroundColor: 'transparent',
+        flexDirection: 'row',
+        position: 'relative',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    buttonFlip: {
         width: (Dimensions.get("window").width)*.3,
         borderRadius: 25,
         height: 50,
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "green",
+    },
+    buttonRecord: {
+        width: (Dimensions.get("window").width)*.3,
+        borderRadius: 25,
+        height: 50,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "red",
     },
     text: {
         fontSize: 18,
