@@ -18,6 +18,7 @@ const cameraPlaceHolder = () => {
 };
 
 
+
 const Tab = createMaterialBottomTabNavigator();
 
 function Navigation() {
