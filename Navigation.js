@@ -8,6 +8,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import Gallery from './Gallery';
 import CreateAccount from "./CreateAccount"
 import CameraScreen from './Camera'
+import RecordVideo from './RecordVideo'
 
 const Tab = createMaterialBottomTabNavigator();
 
