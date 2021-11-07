@@ -37,7 +37,7 @@ const Gallery = () => {
       );
     
       return (
-        <View>
+        
         <SafeAreaView style={styles.container}>
           <FlatList
             data={DATA}
@@ -45,7 +45,7 @@ const Gallery = () => {
             keyExtractor={item => item.id}
           />
         </SafeAreaView>
-        </View>
+        
       );
 }
 const styles = StyleSheet.create({

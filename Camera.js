@@ -9,11 +9,16 @@ import { Dimensions } from "react-native";
 const CameraScreen = (props) => {
     const [type, setType] = useState(Camera.Constants.Type.back);
     const [hasPermission, setHasPermission] = useState(null);
+    const [isRecording, setRecording] = useState(false)
 
     useEffect(() => {
         (async () => {
         const { status } = await Camera.requestCameraPermissionsAsync();
         setHasPermission(status === 'granted');
+        // const { status } = await Camera.getMicrophonePermissionsAsync();
+        // setHasPermission(status === 'granted');
+        // const { status3 } = await Camera.getAvailableVideoCodecsAsync();
+        // setHasPermission(status3 === 'granted');
         })();
     }, []);
 
