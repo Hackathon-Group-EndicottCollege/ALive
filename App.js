@@ -1,12 +1,14 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet,Touch, Text,TextInput, View } from "react-native";
 import Navigation from "./Navigation";
+import CreateAccount from "./CreateAccount"
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Navigation></Navigation>
-    </View>
+     {/* <Navigation></Navigation> */}
+  
+      </View>
   );
 }
 
