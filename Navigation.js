@@ -6,6 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { Dimensions } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Gallery from './Gallery';
+import CreateAccount from "./CreateAccount"
 import CameraScreen from './Camera'
 
 const Tab = createMaterialBottomTabNavigator();

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Navigation from "./Navigation";
 import Login from "./Login";
+import CreateAccount from "./CreateAccount"
 
 export default function App() {
   const [isLoggedIn, setLogin] = useState(false);
@@ -18,6 +19,7 @@ export default function App() {
       </View>
     );
   }
+ 
 }
 
 const styles = StyleSheet.create({

@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, View, Text,TextInput,TouchableOpacity,Button, Dimensions} from "react-native";
+import { SafeAreaView, StyleSheet, View, Text,TextInput,TouchableOpacity,Button, Dimensions, Alert} from "react-native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 
 const CreateAccount = () => {
@@ -9,7 +9,7 @@ const CreateAccount = () => {
     const [confirmpword, onChangePwordConfirm] = React.useState(false);
    
     return(
-        <SafeAreaView  style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <SafeAreaView  style={{justifyContent: "center", alignItems: "center" }}>
            <TextInput
         style={styles.input}
         onChangeText={onChangeName}
@@ -35,18 +35,23 @@ const CreateAccount = () => {
          placeholder= "Confirm Password" 
         />
        <TouchableOpacity> 
-           <Text style={ (confirmpword == pword) ? { color:'white'} : {color : 'red'} }>Passwords Dont match </Text>
+           <Text style={ (confirmpword == pword) ? { color:'white'} : {color : 'red'}}>Passwords Dont match </Text>
            <Text style={ (confirmpword == pword) ? { color:'green'} : {color : 'white'}}>Passwords Match</Text>
+            
        </TouchableOpacity>
        
-        <Button 
+        <Button
         title="Continue"
-        backgroundcolor="#000000"
-        color="#808080"
+        color="#000000"
+        onPress={()=>{
+            if(confirmpword != pword){
+                alert('Passwords dont match');
+            }}}
       />
     </SafeAreaView>
     );
-}
+    }
+
 const styles = StyleSheet.create({
     container: {
         width: Dimensions.get("window").width,
