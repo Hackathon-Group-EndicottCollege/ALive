@@ -12,20 +12,11 @@ const fakeScene1 = () => {
     <SafeAreaView
       style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
     >
-      <Text>I hate myself</Text>
+      <Text>Live Camera</Text>
     </SafeAreaView>
   );
 };
 
-const fakeScene2 = () => {
-  return (
-    <SafeAreaView
-      style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
-    >
-      <Text>Pain</Text>
-    </SafeAreaView>
-  );
-};
 
 const Tab = createMaterialBottomTabNavigator();
 
