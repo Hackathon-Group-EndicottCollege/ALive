@@ -5,6 +5,8 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { NavigationContainer } from "@react-navigation/native";
 import { Dimensions } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Gallery from './Gallery';
+
 const fakeScene1 = () => {
   return (
     <SafeAreaView
@@ -50,7 +52,7 @@ function Navigation() {
           />
           <Tab.Screen
             name="Gallery"
-            component={fakeScene2}
+            component={Gallery}
             options={{
               tabBarLabel: "Gallery",
               tabBarIcon: ({ color }) => (
