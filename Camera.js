@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { SafeAreaView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Camera } from 'expo-camera';
 import { Dimensions } from "react-native";
-
+// Expo Camera
+// https://docs.expo.dev/versions/latest/sdk/camera/
+// Non Expo
+// https://www.codegrepper.com/code-examples/javascript/react+native+camera+expo 
 const CameraScreen = (props) => {
     const [type, setType] = useState(Camera.Constants.Type.back);
     const [hasPermission, setHasPermission] = useState(null);
@@ -53,10 +56,12 @@ const styles = StyleSheet.create({
         margin: 20,
     },
     button: {
-        flex: 1,
-        alignSelf: 'flex-end',
-        alignItems: 'center',
-        height: Dimensions.get("window").height - 100,
+        width: (Dimensions.get("window").width)*.3,
+        borderRadius: 25,
+        height: 50,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "green",
     },
     text: {
         fontSize: 18,
