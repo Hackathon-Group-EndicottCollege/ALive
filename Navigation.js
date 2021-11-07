@@ -21,7 +21,7 @@ const cameraPlaceHolder = () => {
 
 const Tab = createMaterialBottomTabNavigator();
 
-function Navigation() {
+const Navigation = () => {
   return (
     <View style={{ flex: 1 }}>
       <NavigationContainer>
