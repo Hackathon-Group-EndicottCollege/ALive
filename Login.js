@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    width: "10%",
+    width: (Dimensions.get("window").width)*.3,
     borderRadius: 25,
     height: 50,
     alignItems: "center",
