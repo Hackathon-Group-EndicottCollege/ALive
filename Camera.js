@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { SafeAreaView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Camera } from 'expo-camera';
 import { Dimensions } from "react-native";
-
+// Expo Camera
+// https://docs.expo.dev/versions/latest/sdk/camera/
+// Non Expo
+// https://www.codegrepper.com/code-examples/javascript/react+native+camera+expo 
 const CameraScreen = (props) => {
     const [type, setType] = useState(Camera.Constants.Type.back);
     const [hasPermission, setHasPermission] = useState(null);
